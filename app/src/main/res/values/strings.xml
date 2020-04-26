@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Taekwondo</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="button_send">Send</string>
+    <string name="tv_test1">杜宗伦</string>
+    <string name="tv_test2">杜宗伦加油呀经过这次就是成长</string>
+</resources>
