@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
 
 /**
@@ -20,9 +21,14 @@ public class MainActivity extends AppCompatActivity {
 
     //您的键是一个公共常量 EXTRA_MESSAGE，因为下一个 Activity 将使用该键检索文本值。为 Intent extra 定义键时，最好使用应用的软件包名称作为前缀。这样可以确保这些键是独一无二的，万一您的应用需要与其他应用进行交互。
     public static final String EXTRA_MESSAGE = "com.example.taekwondo.MESSAGE";
+
+    //首先声明控件
     private Button mBtnTextView;
     private Button button3;
     private TextView textView6;
+    private Button btnImageView;
+    private Button button5;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
         });
         button3 = findViewById(R.id.button3);
         textView6 = findViewById(R.id.textView6);
+        btnImageView = findViewById(R.id.btnImageView);
+        button5 = findViewById(R.id.button5);
         //先根据控件ID找到控件，然后调用setListener
         setListener();
     }
@@ -53,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
         OnClick onclick = new OnClick();
         button3.setOnClickListener(onclick);
         textView6.setOnClickListener(onclick);
+        btnImageView.setOnClickListener(onclick);
+        button5.setOnClickListener(onclick);
     }
 
     //OnClick 实现了 ONClickListener接口
@@ -67,6 +77,12 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.button3:
                     intent = new Intent(MainActivity.this,ButtonActivity.class);
+                    break;
+                case R.id.btnImageView:
+                    intent = new Intent(MainActivity.this,ImageViewActivity.class);
+                    break;
+                case R.id.button5:
+                    intent = new Intent(MainActivity.this, ZaleTestActivity.class);
                     break;
             }
             startActivity(intent);
