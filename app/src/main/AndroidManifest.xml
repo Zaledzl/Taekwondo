@@ -11,7 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WebViewActivity"></activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ToastActivity" />
+        <activity android:name=".WebViewActivity" />
         <activity android:name=".recyclerview.PuRecyclerViewActivity" />
         <activity android:name=".GridRecyclerViewActivity" />
         <activity android:name=".recyclerview.HorRecyclerViewActivity" />
@@ -20,37 +28,32 @@
             android:parentActivityName=".recyclerview.RecyclerViewActivity" />
         <activity
             android:name=".recyclerview.RecyclerViewActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".UIActivity" />
         <activity
             android:name=".ZaleTestActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".UIActivity" />
         <activity
             android:name=".ImageViewActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".UIActivity" />
         <activity
             android:name=".EditTextActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".UIActivity" />
         <activity
             android:name=".ButtonActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".UIActivity" />
         <activity
             android:name=".TextViewActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".UIActivity" />
         <activity
             android:name=".DisplayMessageActivity"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".UIActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".UIActivity" />
         </activity>
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name=".UIActivity">
         </activity>
     </application>
 
