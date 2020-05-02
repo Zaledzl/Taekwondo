@@ -31,6 +31,7 @@ public class UIActivity extends AppCompatActivity {
     private Button button6;
     private Button button7;
     private Button button8;
+    private Button button9;
 
 
     @Override
@@ -57,6 +58,7 @@ public class UIActivity extends AppCompatActivity {
         button6 = findViewById(R.id.button6);
         button7 = findViewById(R.id.button7);
         button8 = findViewById(R.id.button8);
+        button9 = findViewById(R.id.button9);
         //先根据控件ID找到控件，然后调用setListener
         setListener();
     }
@@ -72,6 +74,7 @@ public class UIActivity extends AppCompatActivity {
         button6.setOnClickListener(onclick);
         button7.setOnClickListener(onclick);
         button8.setOnClickListener(onclick);
+        button9.setOnClickListener(onclick);
     }
 
     //OnClick 实现了 ONClickListener接口
@@ -100,7 +103,10 @@ public class UIActivity extends AppCompatActivity {
                     intent = new Intent(UIActivity.this, WebViewActivity.class);
                     break;
                 case R.id.button8:
-                    intent = new Intent(UIActivity.this, ToastActivity.class);
+                    intent = new Intent(UIActivity.this, DialogActivity.class);
+                    break;
+                case R.id.button9:
+                    intent = new Intent(UIActivity.this, ProgressActivity.class);
                     break;
             }
             startActivity(intent);
