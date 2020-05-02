@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
+import com.example.taekwondo.recyclerview.RecyclerViewActivity;
+
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
 
 /**
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView textView6;
     private Button btnImageView;
     private Button button5;
+    private Button button6;
 
 
     @Override
@@ -51,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         textView6 = findViewById(R.id.textView6);
         btnImageView = findViewById(R.id.btnImageView);
         button5 = findViewById(R.id.button5);
+        button6 = findViewById(R.id.button6);
         //先根据控件ID找到控件，然后调用setListener
         setListener();
     }
@@ -63,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         textView6.setOnClickListener(onclick);
         btnImageView.setOnClickListener(onclick);
         button5.setOnClickListener(onclick);
+        button6.setOnClickListener(onclick);
     }
 
     //OnClick 实现了 ONClickListener接口
@@ -83,6 +88,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.button5:
                     intent = new Intent(MainActivity.this, ZaleTestActivity.class);
+                    break;
+                case R.id.button6:
+                    intent = new Intent(MainActivity.this, RecyclerViewActivity.class);
                     break;
             }
             startActivity(intent);
