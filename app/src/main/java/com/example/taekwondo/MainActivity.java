@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnImageView;
     private Button button5;
     private Button button6;
+    private Button button7;
 
 
     @Override
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         btnImageView = findViewById(R.id.btnImageView);
         button5 = findViewById(R.id.button5);
         button6 = findViewById(R.id.button6);
+        button7 = findViewById(R.id.button7);
         //先根据控件ID找到控件，然后调用setListener
         setListener();
     }
@@ -68,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
         btnImageView.setOnClickListener(onclick);
         button5.setOnClickListener(onclick);
         button6.setOnClickListener(onclick);
+        button7.setOnClickListener(onclick);
     }
 
     //OnClick 实现了 ONClickListener接口
@@ -91,6 +94,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.button6:
                     intent = new Intent(MainActivity.this, RecyclerViewActivity.class);
+                    break;
+                case R.id.button7:
+                    intent = new Intent(MainActivity.this, WebViewActivity.class);
                     break;
             }
             startActivity(intent);
