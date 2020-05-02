@@ -50,7 +50,7 @@ public class HorAdapter extends RecyclerView.Adapter<HorAdapter.LinearViewHolder
 
         public LinearViewHolder(@NonNull View itemView) {
             super(itemView);
-            textView = itemView.findViewById(R.id.textView5);
+            textView = itemView.findViewById(R.id.tv_title);
         }
     }
 

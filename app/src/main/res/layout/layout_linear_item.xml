@@ -7,7 +7,7 @@
     android:background="#9E4343">
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/tv_title"
         android:layout_width="170dp"
         android:layout_height="61dp"
         android:layout_marginStart="16dp"

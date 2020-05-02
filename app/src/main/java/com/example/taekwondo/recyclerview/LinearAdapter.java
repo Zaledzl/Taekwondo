@@ -35,7 +35,6 @@ public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearView
             @Override
             public void onClick(View v) {
                 mListener.onClick(position);
-//                Toast.makeText(mContext,"Click..."+position,Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -51,7 +50,7 @@ public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearView
 
         public LinearViewHolder(@NonNull View itemView) {
             super(itemView);
-            textView = itemView.findViewById(R.id.textView5);
+            textView = itemView.findViewById(R.id.tv_title);
         }
     }
 

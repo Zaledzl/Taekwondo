@@ -27,7 +27,7 @@ public class PuRecyclerViewActivity extends AppCompatActivity {
         mRvPu.setAdapter(new StaggeredGridAdapter(PuRecyclerViewActivity.this, new StaggeredGridAdapter.OnItemClickListener() {
             @Override
             public void onClick(int pos) {
-                Toast.makeText(PuRecyclerViewActivity.this,"cllick...."+pos, Toast.LENGTH_SHORT).show();
+                Toast.makeText(PuRecyclerViewActivity.this,"click..."+pos, Toast.LENGTH_SHORT).show();
             }
         }));
     }
