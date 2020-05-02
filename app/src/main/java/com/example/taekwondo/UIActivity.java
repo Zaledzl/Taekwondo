@@ -17,6 +17,10 @@ import com.example.taekwondo.recyclerview.RecyclerViewActivity;
  * activity_ui.xml 此 XML 文件定义了 Activity 界面的布局。它包含一个 TextView 元素，其中具有“Hello, World!”文本
  * AndroidManifest.xml   清单文件描述了应用的基本特性并定义了每个应用组件。
  */
+
+//2020年5月3日00:43:09  把Activity的位置换了换，放到了一个包里面，整个就都出了大问题，太可怕了啊
+//现在用版本控制回来了，但是popup的东西都不见了，不过，就这样吧，UI告一段落了
+
 public class UIActivity extends AppCompatActivity {
 
     //您的键是一个公共常量 EXTRA_MESSAGE，因为下一个 Activity 将使用该键检索文本值。为 Intent extra 定义键时，最好使用应用的软件包名称作为前缀。这样可以确保这些键是独一无二的，万一您的应用需要与其他应用进行交互。
