@@ -5,31 +5,30 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.taekwondo.R;
 
-public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearViewHolder> {
+public class GridAdapter extends RecyclerView.Adapter<GridAdapter.LinearViewHolder> {
 
     private Context mContext;
     private OnItemClickListener mListener;
 
-    public LinearAdapter(Context context,OnItemClickListener listener){
+    public GridAdapter(Context context, OnItemClickListener listener){
         this.mContext = context;
         this.mListener = listener;
     }
 
     @NonNull
     @Override
-    public LinearAdapter.LinearViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new LinearViewHolder(LayoutInflater.from(mContext).inflate(R.layout.layout_linear_item,parent,false));
+    public GridAdapter.LinearViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new LinearViewHolder(LayoutInflater.from(mContext).inflate(R.layout.layout_grid_item,parent,false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull LinearAdapter.LinearViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull GridAdapter.LinearViewHolder holder, final int position) {
         holder.textView.setText("Hello World");
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,7 +41,7 @@ public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearView
 
     @Override
     public int getItemCount() {
-        return 30;
+        return 60;
     }
 
     class LinearViewHolder extends RecyclerView.ViewHolder{

@@ -11,11 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".recyclerview.PuRecyclerViewActivity"></activity>
+        <activity android:name=".GridRecyclerViewActivity" />
+        <activity android:name=".recyclerview.HorRecyclerViewActivity" />
         <activity
             android:name=".recyclerview.LinearRecyclerViewActivity"
             android:parentActivityName=".recyclerview.RecyclerViewActivity" />
-        <activity android:name=".recyclerview.RecyclerViewActivity"
-            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".recyclerview.RecyclerViewActivity"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".ZaleTestActivity"
             android:parentActivityName=".MainActivity" />
