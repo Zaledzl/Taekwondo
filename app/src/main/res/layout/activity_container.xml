@@ -4,25 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".fragment.ContainerActivity">
 
     <Button
-        android:id="@+id/btn_ui"
-        android:layout_width="354dp"
-        android:layout_height="41dp"
+        android:id="@+id/btn_change"
+        android:layout_width="260dp"
+        android:layout_height="48dp"
         android:layout_marginTop="16dp"
-        android:text="UI"
+        android:text="更换Fragment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btn_data_control"
-        android:layout_width="355dp"
-        android:layout_height="39dp"
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="379dp"
+        android:layout_height="635dp"
         android:layout_marginTop="16dp"
-        android:text="data"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_ui" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_change">
+
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
