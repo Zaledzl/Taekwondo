@@ -7,9 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.taekwondo.datastorage.DataStorageActivity;
+
 public class MainActivity extends AppCompatActivity {
 
-    private Button mBtnUI,mBtnDataControl;
+    private Button mBtnUI,mBtnDataControl,button13;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,9 +19,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mBtnUI = findViewById(R.id.btn_ui);
         mBtnDataControl = findViewById(R.id.btn_data_control);
+        button13 = findViewById(R.id.button13);
         OnClick onClick = new OnClick();
         mBtnUI.setOnClickListener(onClick);
         mBtnDataControl.setOnClickListener(onClick);
+        button13.setOnClickListener(onClick);
     }
 
     class OnClick implements View.OnClickListener{
@@ -32,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_data_control:
                     intent = new Intent(MainActivity.this, DataControlActivity.class);
+                    break;
+                case R.id.button13:
+                    intent = new Intent(MainActivity.this, DataStorageActivity  .class);
                     break;
             }
             startActivity(intent);
